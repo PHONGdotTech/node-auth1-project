@@ -15,7 +15,7 @@ router.post('/login', (req,res)=>{
             
         })
         .catch(err => {
-            res.status(500).json(err)
+            res.status(500).json({name, message, stack})
         })
 })
 
@@ -34,7 +34,7 @@ router.post('/register', (req,res)=>{
             })
         })
         .catch(err => {
-            res.status(500).json(err)
+            res.status(500).json({name, message, stack})
         })
 })
 
